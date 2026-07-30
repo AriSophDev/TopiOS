@@ -3,3 +3,4 @@ build/
 *.elf
 *.iso
 .DS_Store
+qemu.log
