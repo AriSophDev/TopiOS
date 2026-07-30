@@ -23,3 +23,4 @@ extern "C" void kernel_main() {
       serial::put_char(c);
   }
 }
+

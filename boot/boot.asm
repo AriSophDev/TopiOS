@@ -19,20 +19,6 @@ header_start:
     dd 8
 header_end:
 
-; ── BSS: stack + page tables ─────────────────────────────────────
-section .bss alloc noexec nowrite align=4096
-pml4_table: resb 4096
-pdp_table:  resb 4096
-pd_table:   resb 4096
-
-align 16
-stack_bottom:
-    resb 16384
-stack_top:
-
-; ── 32-bit boot code ─────────────────────────────────────────────
-section .text alloc exec nowrite align=16
-bits 32
 
 global _start
 extern kernel_main
@@ -160,3 +146,4 @@ gdt64_ptr:
 
 err_msg: db "ERROR: No long mode support"
 err_len: equ $ - err_msg
+
