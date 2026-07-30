@@ -1,8 +1,15 @@
-extern "C" void kernel_main(){
-    volatile char* video = (volatile char*)0xB8000;
+#include "vga.hpp"
 
-    video[0] = 'A';
-    video[1] = 0x07;
+extern "C" void kernel_main() {
 
-    while (true){}
+    vga::clear_screen();
+
+    vga::set_color(0x0A);
+    vga::put_line("hola");
+
+    vga::set_color(0x0F);
+    vga::put_line("Welcome to TopiOS");
+
+    while (true) {
+    }
 }

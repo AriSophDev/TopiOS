@@ -9,7 +9,7 @@ project(TopiOS
 )
 
 
-add_executable(kernel.elf kernel/kernel.cpp)
+add_executable(kernel.elf kernel/kernel.cpp kernel/vga.cpp)
 
 target_compile_options(kernel.elf PRIVATE
     -ffreestanding
