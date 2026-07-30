@@ -10,7 +10,13 @@ project(TopiOS
 )
 
 
-add_executable(kernel.elf kernel/kernel.cpp kernel/vga.cpp boot/boot.asm)
+add_executable(kernel.elf 
+    kernel/kernel.cpp 
+    kernel/vga.cpp 
+    kernel/serial.cpp 
+    kernel/keyboard.cpp 
+    boot/boot.asm
+)
 
 target_compile_options(kernel.elf PRIVATE
     $<$<COMPILE_LANGUAGE:C,CXX>:-ffreestanding>
