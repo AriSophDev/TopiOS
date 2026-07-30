@@ -2,7 +2,7 @@ ENTRY(kernel_main)
 
 SECTIONS 
 {
-    . = 1m
+    . = 1M;
 
     .text : ALIGN(4K)
     {

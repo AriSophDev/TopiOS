@@ -1,4 +1,4 @@
-global _start 
+global _start
 extern kernel_main
 
 section .text
@@ -9,4 +9,4 @@ _start:
 .hang:
     cli
     hlt
-    jmp'.hang
+    jmp .hang

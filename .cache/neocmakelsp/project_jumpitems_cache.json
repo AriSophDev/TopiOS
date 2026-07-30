@@ -1,0 +1,124 @@
+{
+  "date": "2026-07-29T19:23:19.441145-05:00",
+  "data": {
+    "CMAKE_CXX_COMPILER": {
+      "location": {
+        "uri": "file:///Users/topa/Desktop/Work/TopiOS/scripts/toolchain-x86-64.cmake",
+        "range": {
+          "start": {
+            "line": 3,
+            "character": 4
+          },
+          "end": {
+            "line": 3,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /Users/topa/Desktop/Work/TopiOS/scripts/toolchain-x86-64.cmake",
+      "is_function": false
+    },
+    "CMAKE_CXX_EXTENSIONS": {
+      "location": {
+        "uri": "file:///Users/topa/Desktop/Work/TopiOS/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 3,
+            "character": 4
+          },
+          "end": {
+            "line": 3,
+            "character": 24
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /Users/topa/Desktop/Work/TopiOS/CMakeLists.txt",
+      "is_function": false
+    },
+    "CMAKE_CXX_STANDARD_REQUIRED": {
+      "location": {
+        "uri": "file:///Users/topa/Desktop/Work/TopiOS/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 2,
+            "character": 4
+          },
+          "end": {
+            "line": 2,
+            "character": 31
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /Users/topa/Desktop/Work/TopiOS/CMakeLists.txt",
+      "is_function": false
+    },
+    "CMAKE_TRY_COMPILE_TARGET_TYPE": {
+      "location": {
+        "uri": "file:///Users/topa/Desktop/Work/TopiOS/scripts/toolchain-x86-64.cmake",
+        "range": {
+          "start": {
+            "line": 5,
+            "character": 4
+          },
+          "end": {
+            "line": 5,
+            "character": 33
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /Users/topa/Desktop/Work/TopiOS/scripts/toolchain-x86-64.cmake",
+      "is_function": false
+    },
+    "CMAKE_CXX_STANDARD": {
+      "location": {
+        "uri": "file:///Users/topa/Desktop/Work/TopiOS/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 1,
+            "character": 4
+          },
+          "end": {
+            "line": 1,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /Users/topa/Desktop/Work/TopiOS/CMakeLists.txt",
+      "is_function": false
+    },
+    "CMAKE_SYSTEM_NAME": {
+      "location": {
+        "uri": "file:///Users/topa/Desktop/Work/TopiOS/scripts/toolchain-x86-64.cmake",
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 4
+          },
+          "end": {
+            "line": 0,
+            "character": 21
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /Users/topa/Desktop/Work/TopiOS/scripts/toolchain-x86-64.cmake",
+      "is_function": false
+    },
+    "CMAKE_C_COMPILER": {
+      "location": {
+        "uri": "file:///Users/topa/Desktop/Work/TopiOS/scripts/toolchain-x86-64.cmake",
+        "range": {
+          "start": {
+            "line": 2,
+            "character": 4
+          },
+          "end": {
+            "line": 2,
+            "character": 20
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /Users/topa/Desktop/Work/TopiOS/scripts/toolchain-x86-64.cmake",
+      "is_function": false
+    }
+  }
+}
