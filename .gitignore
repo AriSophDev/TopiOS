@@ -4,4 +4,3 @@ build/
 *.iso
 .DS_Store
 qemu.log
-qemu.log
