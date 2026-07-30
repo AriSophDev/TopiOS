@@ -5,16 +5,16 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 project(TopiOS
     VERSION 0.1.0
-    LANGUAGES C CXX ASM
+    LANGUAGES C CXX ASM_NASM
 )
 
 
-add_executable(kernel.elf kernel/kernel.cpp kernel/vga.cpp)
+add_executable(kernel.elf kernel/kernel.cpp kernel/vga.cpp boot/boot.asm)
 
 target_compile_options(kernel.elf PRIVATE
-    -ffreestanding
-    -fno-exceptions
-    -fno-rtti
+    $<$<COMPILE_LANGUAGE:C,CXX>:-ffreestanding>
+    $<$<COMPILE_LANGUAGE:CXX>:-fno-exceptions>
+    $<$<COMPILE_LANGUAGE:CXX>:-fno-rtti>
 )
 
 target_link_options(kernel.elf PRIVATE

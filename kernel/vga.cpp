@@ -1,5 +1,4 @@
 #include "vga.hpp"
-#include <cstddef>
 #include <stdint.h>
 
 namespace {

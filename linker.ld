@@ -1,8 +1,14 @@
-ENTRY(kernel_main)
+ENTRY(_start)
 
 SECTIONS 
 {
     . = 1M;
+
+    .multiboot : ALIGN(8)
+    {
+    
+        *(.multiboot)
+    }
 
     .text : ALIGN(4K)
     {
