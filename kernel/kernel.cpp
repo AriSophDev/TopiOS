@@ -1,12 +1,15 @@
-#include <stdint.h>
+#include "vga.hpp"
 
 extern "C" void kernel_main() {
-    volatile uint16_t* vga = (volatile uint16_t*)0xB8000;
 
-    vga[0] = 0x0F48; // H
-    vga[1] = 0x0F69; // i
+    vga::clear_screen();
+
+    vga::set_color(0x0A);
+    vga::put_line("hola");
+
+    vga::set_color(0x0F);
+    vga::put_line("Welcome to TopiOS");
 
     while (true) {
-        asm volatile("hlt");
     }
 }
