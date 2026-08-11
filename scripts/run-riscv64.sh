@@ -6,7 +6,10 @@
 #   TOPIOS_BIOS=<path-to-opensbi> scripts/run-riscv64.sh
 set -euo pipefail
 
-KERNEL="${1:-build-riscv64/kernel.elf}"
+# Resolve the project root regardless of where the script is invoked from.
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+KERNEL="${1:-$ROOT/build-riscv64/kernel.elf}"
 BIOS="${TOPIOS_BIOS:-/usr/local/share/qemu/opensbi-riscv64-generic-fw_dynamic.bin}"
 
 if [ ! -f "$KERNEL" ]; then
