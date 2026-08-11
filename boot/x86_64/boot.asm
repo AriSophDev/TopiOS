@@ -23,6 +23,7 @@ header_end:
 global _start
 extern kernel_main
 
+bits 32
 _start:
     cli
     mov esp, stack_top
@@ -146,4 +147,13 @@ gdt64_ptr:
 
 err_msg: db "ERROR: No long mode support"
 err_len: equ $ - err_msg
+
+; ── BSS ──────────────────────────────────────────────────────────
+section .bss nobits alloc noexec nowrite align=4096
+align 4096
+pml4_table:  resb 4096
+pdp_table:   resb 4096
+pd_table:    resb 4096
+stack_bottom: resb 16384
+stack_top:
 
