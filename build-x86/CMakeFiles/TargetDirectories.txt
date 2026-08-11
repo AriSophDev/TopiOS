@@ -1,0 +1,3 @@
+/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles/kernel.elf.dir
+/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles/edit_cache.dir
+/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles/rebuild_cache.dir

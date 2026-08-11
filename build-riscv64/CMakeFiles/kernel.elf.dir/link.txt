@@ -1,0 +1,1 @@
+/usr/local/bin/riscv64-elf-g++  -march=rv64gc -mabi=lp64 -mcmodel=medany -nostdlib -static -T/Users/topa/Desktop/Work/TopiOS/linker-riscv64.ld CMakeFiles/kernel.elf.dir/kernel/riscv/kernel_riscv.cpp.obj CMakeFiles/kernel.elf.dir/kernel/riscv/uart.cpp.obj CMakeFiles/kernel.elf.dir/kernel/riscv/virtio.cpp.obj CMakeFiles/kernel.elf.dir/boot/riscv64/boot.S.obj -o kernel.elf

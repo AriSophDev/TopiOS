@@ -4,3 +4,4 @@ build/
 *.iso
 .DS_Store
 qemu.log
+docs/PORT_RISCV.md
