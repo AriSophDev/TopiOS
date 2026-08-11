@@ -15,7 +15,22 @@ inline void outb(uint16_t port, uint8_t val) {
     asm volatile("outb %0, %1" :: "a"(val), "Nd"(port));
 }
 
-static char scancode_to_char(uint8_t sc, bool shift) {
+static bool shift = false;
+
+constexpr int BUF_SIZE = 64;
+static volatile uint8_t buf[BUF_SIZE];
+static volatile int head = 0;
+static volatile int tail = 0;
+
+void push_scancode(uint8_t sc) {
+    int next = (head + 1) % BUF_SIZE;
+    if (next != tail) {
+        buf[head] = sc;
+        head = next;
+    }
+}
+
+char scancode_to_char(uint8_t sc, bool shift) {
     switch (sc) {
         case 0x02: return shift ? '!' : '1';
         case 0x03: return shift ? '@' : '2';
@@ -72,23 +87,7 @@ static char scancode_to_char(uint8_t sc, bool shift) {
     }
 }
 
-static bool key_pressed[128] = {};
-static bool shift = false;
-} // namespace
-
-namespace keyboard {
-
-void init() {
-    outb(0x64, 0xAE);
-}
-
-int available() {
-    return (inb(KB_STATUS) & 1) != 0;
-}
-
-char poll() {
-    if (!available()) return 0;
-    uint8_t sc = inb(KB_DATA);
+char process_scancode(uint8_t sc) {
     if (sc == 0xE0) return 0;
     bool is_make = (sc & 0x80) == 0;
     uint8_t code = sc & 0x7F;
@@ -101,6 +100,23 @@ char poll() {
 
     return scancode_to_char(code, shift);
 }
+} // namespace
+
+namespace keyboard {
+
+void init() {
+    outb(0x64, 0xAE);
+}
+
+char poll() {
+    while (head != tail) {
+        uint8_t sc = buf[tail];
+        tail = (tail + 1) % BUF_SIZE;
+        char c = process_scancode(sc);
+        if (c) return c;
+    }
+    return 0;
+}
 
 char read() {
     char c;
@@ -108,6 +124,12 @@ char read() {
         asm volatile("pause");
     }
     return c;
+}
+
+void irq_handler(InterruptFrame*) {
+    if (inb(KB_STATUS) & 1) {
+        push_scancode(inb(KB_DATA));
+    }
 }
 
 } // namespace keyboard

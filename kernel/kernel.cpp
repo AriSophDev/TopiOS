@@ -1,26 +1,47 @@
 #include "vga.hpp"
 #include "serial.hpp"
 #include "keyboard.hpp"
+#include "idt.hpp"
+#include "pic.hpp"
+#include "interrupt.hpp"
 
 using vga::put_line;
 
 extern "C" void kernel_main() {
-  serial::init();
-  serial::put_string("TopiOS booted!\n");
+    serial::init();
+    serial::put_string("TopiOS booted!\n");
 
-  vga::clear_screen();
-  vga::set_color(0x0A);
-  put_line("Hola");
-  vga::set_color(0x0F);
+    vga::clear_screen();
+    vga::set_color(0x0A);
+    put_line("TopiOS - Initializing interrupts...");
+    vga::set_color(0x0F);
 
-  keyboard::init();
-  vga::put_line("TopiOS - Keyboard driver ready\n");
+    idt::init();
+    serial::put_string("IDT loaded\n");
 
-  while (true) {
-      char c = keyboard::read();
-      if (c == '\r') c = '\n';
-      vga::put_char(c);
-      serial::put_char(c);
-  }
+    keyboard::init();
+    interrupt::register_handler(33, keyboard::irq_handler);
+    pic::unmask(1); // Unmask IRQ1 (keyboard)
+    serial::put_string("Keyboard IRQ registered\n");
+
+    vga::clear_screen();
+    vga::set_color(0x0A);
+    put_line("TopiOS - Ready");
+    vga::set_color(0x0F);
+    put_line("Type something:");
+    put_line("");
+
+    asm volatile("sti");
+
+    while (true) {
+        char c = keyboard::read();
+        if (c == '\b') {
+            vga::put_char('\b');
+            vga::put_char(' ');
+            vga::put_char('\b');
+        } else {
+            vga::put_char(c);
+        }
+        serial::put_char(c);
+    }
 }
-

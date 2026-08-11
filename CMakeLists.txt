@@ -31,13 +31,19 @@ if(TOPIOS_ARCH STREQUAL "riscv64")
         kernel/riscv/virtio.cpp
     )
 else()
-    set(TOPIOS_BOOT_SRC boot/x86_64/boot.asm)
+    set(TOPIOS_BOOT_SRC
+        boot/x86_64/boot.asm
+        boot/isr_stubs.asm
+    )
     set(TOPIOS_LINKER ${CMAKE_SOURCE_DIR}/linker.ld)
     set(TOPIOS_KERNEL_SRC
         kernel/kernel.cpp
         kernel/vga.cpp
         kernel/serial.cpp
         kernel/keyboard.cpp
+        kernel/idt.cpp
+        kernel/pic.cpp
+        kernel/interrupt.cpp
     )
 endif()
 

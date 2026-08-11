@@ -128,11 +128,59 @@ CMakeFiles/kernel.elf.dir/kernel/keyboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kernel.elf.dir/kernel/keyboard.cpp.s"
 	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/topa/Desktop/Work/TopiOS/kernel/keyboard.cpp -o CMakeFiles/kernel.elf.dir/kernel/keyboard.cpp.s
 
+CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj: CMakeFiles/kernel.elf.dir/flags.make
+CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj: /Users/topa/Desktop/Work/TopiOS/kernel/idt.cpp
+CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj: CMakeFiles/kernel.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj -MF CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj.d -o CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj -c /Users/topa/Desktop/Work/TopiOS/kernel/idt.cpp
+
+CMakeFiles/kernel.elf.dir/kernel/idt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kernel.elf.dir/kernel/idt.cpp.i"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/topa/Desktop/Work/TopiOS/kernel/idt.cpp > CMakeFiles/kernel.elf.dir/kernel/idt.cpp.i
+
+CMakeFiles/kernel.elf.dir/kernel/idt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kernel.elf.dir/kernel/idt.cpp.s"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/topa/Desktop/Work/TopiOS/kernel/idt.cpp -o CMakeFiles/kernel.elf.dir/kernel/idt.cpp.s
+
+CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj: CMakeFiles/kernel.elf.dir/flags.make
+CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj: /Users/topa/Desktop/Work/TopiOS/kernel/pic.cpp
+CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj: CMakeFiles/kernel.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj -MF CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj.d -o CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj -c /Users/topa/Desktop/Work/TopiOS/kernel/pic.cpp
+
+CMakeFiles/kernel.elf.dir/kernel/pic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kernel.elf.dir/kernel/pic.cpp.i"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/topa/Desktop/Work/TopiOS/kernel/pic.cpp > CMakeFiles/kernel.elf.dir/kernel/pic.cpp.i
+
+CMakeFiles/kernel.elf.dir/kernel/pic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kernel.elf.dir/kernel/pic.cpp.s"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/topa/Desktop/Work/TopiOS/kernel/pic.cpp -o CMakeFiles/kernel.elf.dir/kernel/pic.cpp.s
+
+CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj: CMakeFiles/kernel.elf.dir/flags.make
+CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj: /Users/topa/Desktop/Work/TopiOS/kernel/interrupt.cpp
+CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj: CMakeFiles/kernel.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj -MF CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj.d -o CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj -c /Users/topa/Desktop/Work/TopiOS/kernel/interrupt.cpp
+
+CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.i"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/topa/Desktop/Work/TopiOS/kernel/interrupt.cpp > CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.i
+
+CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.s"
+	/usr/local/bin/x86_64-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/topa/Desktop/Work/TopiOS/kernel/interrupt.cpp -o CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.s
+
 CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj: CMakeFiles/kernel.elf.dir/flags.make
 CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj: /Users/topa/Desktop/Work/TopiOS/boot/x86_64/boot.asm
 CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj: CMakeFiles/kernel.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building ASM_NASM object CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building ASM_NASM object CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj"
 	/usr/local/bin/nasm $(ASM_NASM_DEFINES) $(ASM_NASM_INCLUDES) -f elf64 $(ASM_NASM_FLAGS) -MD CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj.d -MT CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj -o CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj /Users/topa/Desktop/Work/TopiOS/boot/x86_64/boot.asm
+
+CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj: CMakeFiles/kernel.elf.dir/flags.make
+CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj: /Users/topa/Desktop/Work/TopiOS/boot/isr_stubs.asm
+CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj: CMakeFiles/kernel.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building ASM_NASM object CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj"
+	/usr/local/bin/nasm $(ASM_NASM_DEFINES) $(ASM_NASM_INCLUDES) -f elf64 $(ASM_NASM_FLAGS) -MD CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj.d -MT CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj -o CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj /Users/topa/Desktop/Work/TopiOS/boot/isr_stubs.asm
 
 # Object files for target kernel.elf
 kernel_elf_OBJECTS = \
@@ -140,7 +188,11 @@ kernel_elf_OBJECTS = \
 "CMakeFiles/kernel.elf.dir/kernel/vga.cpp.obj" \
 "CMakeFiles/kernel.elf.dir/kernel/serial.cpp.obj" \
 "CMakeFiles/kernel.elf.dir/kernel/keyboard.cpp.obj" \
-"CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj"
+"CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj" \
+"CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj" \
+"CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj" \
+"CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj" \
+"CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj"
 
 # External object files for target kernel.elf
 kernel_elf_EXTERNAL_OBJECTS =
@@ -149,10 +201,14 @@ kernel.elf: CMakeFiles/kernel.elf.dir/kernel/kernel.cpp.obj
 kernel.elf: CMakeFiles/kernel.elf.dir/kernel/vga.cpp.obj
 kernel.elf: CMakeFiles/kernel.elf.dir/kernel/serial.cpp.obj
 kernel.elf: CMakeFiles/kernel.elf.dir/kernel/keyboard.cpp.obj
+kernel.elf: CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj
+kernel.elf: CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj
+kernel.elf: CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj
 kernel.elf: CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj
+kernel.elf: CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj
 kernel.elf: CMakeFiles/kernel.elf.dir/build.make
 kernel.elf: CMakeFiles/kernel.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable kernel.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/topa/Desktop/Work/TopiOS/build-x86/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable kernel.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kernel.elf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

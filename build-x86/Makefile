@@ -129,6 +129,14 @@ kernel.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/build
 .PHONY : kernel.elf/fast
 
+boot/isr_stubs.obj: boot/isr_stubs.asm.obj
+.PHONY : boot/isr_stubs.obj
+
+# target to build an object file
+boot/isr_stubs.asm.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/boot/isr_stubs.asm.obj
+.PHONY : boot/isr_stubs.asm.obj
+
 boot/x86_64/boot.obj: boot/x86_64/boot.asm.obj
 .PHONY : boot/x86_64/boot.obj
 
@@ -136,6 +144,54 @@ boot/x86_64/boot.obj: boot/x86_64/boot.asm.obj
 boot/x86_64/boot.asm.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/boot/x86_64/boot.asm.obj
 .PHONY : boot/x86_64/boot.asm.obj
+
+kernel/idt.obj: kernel/idt.cpp.obj
+.PHONY : kernel/idt.obj
+
+# target to build an object file
+kernel/idt.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/idt.cpp.obj
+.PHONY : kernel/idt.cpp.obj
+
+kernel/idt.i: kernel/idt.cpp.i
+.PHONY : kernel/idt.i
+
+# target to preprocess a source file
+kernel/idt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/idt.cpp.i
+.PHONY : kernel/idt.cpp.i
+
+kernel/idt.s: kernel/idt.cpp.s
+.PHONY : kernel/idt.s
+
+# target to generate assembly for a file
+kernel/idt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/idt.cpp.s
+.PHONY : kernel/idt.cpp.s
+
+kernel/interrupt.obj: kernel/interrupt.cpp.obj
+.PHONY : kernel/interrupt.obj
+
+# target to build an object file
+kernel/interrupt.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.obj
+.PHONY : kernel/interrupt.cpp.obj
+
+kernel/interrupt.i: kernel/interrupt.cpp.i
+.PHONY : kernel/interrupt.i
+
+# target to preprocess a source file
+kernel/interrupt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.i
+.PHONY : kernel/interrupt.cpp.i
+
+kernel/interrupt.s: kernel/interrupt.cpp.s
+.PHONY : kernel/interrupt.s
+
+# target to generate assembly for a file
+kernel/interrupt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/interrupt.cpp.s
+.PHONY : kernel/interrupt.cpp.s
 
 kernel/kernel.obj: kernel/kernel.cpp.obj
 .PHONY : kernel/kernel.obj
@@ -184,6 +240,30 @@ kernel/keyboard.s: kernel/keyboard.cpp.s
 kernel/keyboard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/keyboard.cpp.s
 .PHONY : kernel/keyboard.cpp.s
+
+kernel/pic.obj: kernel/pic.cpp.obj
+.PHONY : kernel/pic.obj
+
+# target to build an object file
+kernel/pic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/pic.cpp.obj
+.PHONY : kernel/pic.cpp.obj
+
+kernel/pic.i: kernel/pic.cpp.i
+.PHONY : kernel/pic.i
+
+# target to preprocess a source file
+kernel/pic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/pic.cpp.i
+.PHONY : kernel/pic.cpp.i
+
+kernel/pic.s: kernel/pic.cpp.s
+.PHONY : kernel/pic.s
+
+# target to generate assembly for a file
+kernel/pic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kernel.elf.dir/build.make CMakeFiles/kernel.elf.dir/kernel/pic.cpp.s
+.PHONY : kernel/pic.cpp.s
 
 kernel/serial.obj: kernel/serial.cpp.obj
 .PHONY : kernel/serial.obj
@@ -242,13 +322,23 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kernel.elf"
+	@echo "... boot/isr_stubs.obj"
 	@echo "... boot/x86_64/boot.obj"
+	@echo "... kernel/idt.obj"
+	@echo "... kernel/idt.i"
+	@echo "... kernel/idt.s"
+	@echo "... kernel/interrupt.obj"
+	@echo "... kernel/interrupt.i"
+	@echo "... kernel/interrupt.s"
 	@echo "... kernel/kernel.obj"
 	@echo "... kernel/kernel.i"
 	@echo "... kernel/kernel.s"
 	@echo "... kernel/keyboard.obj"
 	@echo "... kernel/keyboard.i"
 	@echo "... kernel/keyboard.s"
+	@echo "... kernel/pic.obj"
+	@echo "... kernel/pic.i"
+	@echo "... kernel/pic.s"
 	@echo "... kernel/serial.obj"
 	@echo "... kernel/serial.i"
 	@echo "... kernel/serial.s"
